@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./pages/index.css" />
+        <title>Mesto Russia</title>
+    </head>
+    <body class="root">
+        <div class="popup popup_edit-profile">
+            <div class="popup__container">
+                <button type="button" class="popup__button-close"></button>
+                <h2 class="popup__container-title">Редактировать профиль</h2>
+                <form name="edit-profile" class="form edit-profile" novalidate>
+                    <input type="text" name="fio" placeholder="Имя" id="fio-input" class="popup__input popup__input_type_name" 
+                        minlength="2" 
+                        maxlength="40" 
+                        required/>
+                    <span class="popup__input-error fio-input-error"></span>
+                    <input type="text" name="info" placeholder="О себе" id="info-input" class="popup__input popup__input_type_info" 
+                        minlength="2" 
+                        maxlength="200" 
+                        required/>
+                    <span class="popup__input-error info-input-error"></span>
+                    <button type="submit" class="popup__container-submit-button popup__container-submit-button_edit-button">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup_add-card">
+            <div class="popup__container">
+                <button type="button" class="popup__button-close"></button>
+                <h2 class="popup__container-title">Новое место</h2>
+                <form name="add-card" class="form add-card" novalidate>
+                    <input type="text" name="name" placeholder="Название" id="name-input" class="popup__input popup__input_name_card" 
+                    required/>
+                    <span class="popup__input-error name-input-error"></span>
+                    <input type="url" name="foto" placeholder="Ссылка на картинку" id="foto-input" class="popup__input popup__input_foto_card" 
+                    required/>
+                    <span class="popup__input-error foto-input-error"></span>
+                    <button type="submit" class="popup__container-submit-button popup__container-submit-button_add-button">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup_gallery">
+            <div class="full-image">
+                <button type="button" class="popup__button-close"></button>
+                <figure class="full-image__container">
+                    <img src="#" alt=" " class="full-image__image" />
+                    <figcaption class="full-image__caption"></figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="page">
+            <header class="header">
+                <img src="./images/logo.svg" alt="Лого" class="header__logo" />
+            </header>
+            <main class="main">
+                <section class="profile">
+                    <img src="./images/jak-iv-kusto.jpg" alt="Жак-Ив Кусто" class="profile__avatar" />
+                    <div class="profile__info">
+                        <h1 class="profile__title profile__title-text">Жак-Ив Кусто</h1>
+                        <p class="profile__subtitle">Исследователь океана</p>
+                        <button type="button" class="profile__edit profile__edit-button" id="ed2it"></button>
+                    </div>
+                    <button type="button" class="profile__add-button" id="addButton"></button>
+                </section>
+                <section class="gallery">
+                    <ul class="elements"></ul>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p class="footer__text">&copy; 2020 Mesto Russia</p>
+            </footer>
+        </div>
+        <template class="element-template">
+            <li class="element">
+                <button type="button" class="element__delete-button"></button>
+                <img src="#" class="element__image" alt="" id="image" />
+                <div class="element__down-sector">
+                    <h2 class="element__title"></h2>
+                    <button type="button" class="element__like-button"></button>
+                </div>
+            </li>
+        </template>
+        <script src="./js/initial-cards.js"></script>
+        <script src="./js/validate.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
