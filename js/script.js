@@ -62,11 +62,15 @@ function openProfilePopup() {
 
 function openAddCardPopup() {
     cardAdd.reset();
+    const popupFormInputs = Array.from(cardAdd.querySelectorAll('.popup__input'));
+    popupFormInputs.forEach((inputElement) => {
+        hideInputError(cardAdd, inputElement);
+    });
     toggleButtonState(inputListAddCard, popupButtonAddCard);
     openPopup(popupContainerAddCard);
 }
 
-function openImagePopup(link, name) {
+const openImagePopup = (link, name) => {
     fullImage.src = link;
     fullImage.alt = name;
     fullImageCaption.textContent = name;
