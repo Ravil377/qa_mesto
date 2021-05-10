@@ -4,5 +4,8 @@
     background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
-    cursor:pointer;
+    
 }
+.element: hover {
+    cursor:pointer;
+}   
