@@ -1,6 +1,7 @@
 .gallery {
     min-height: 744px;
     margin-top: 51px;
+    
 }
 
 @media screen and (max-width: 320px) {
