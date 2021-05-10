@@ -165,8 +165,13 @@ popupCloseButtons.forEach((item) => {
 //  Закрытие попапа по нажатию на оверлей
 popups.forEach((item) => {
     item.addEventListener("click", (e) => {
-        if(e.target === item) 
-            closePopup(item.closest(".popup"));
+        if(e.target === item) {
+            window.addEventListener('mouseup', e => {
+                if(e.target === item) {
+                    closePopup(item.closest(".popup"));
+                }
+            });
+        }              
     });
 });
     
