@@ -32,6 +32,8 @@
                 <h2 class="popup__container-title">Новое место</h2>
                 <form name="add-card" class="form add-card" novalidate>
                     <input type="text" name="name" placeholder="Название" id="name-input" class="popup__input popup__input_name_card" 
+                    minlength="2" 
+                    maxlength="30"
                     required/>
                     <span class="popup__input-error name-input-error"></span>
                     <input type="url" name="foto" placeholder="Ссылка на картинку" id="foto-input" class="popup__input popup__input_foto_card" 
