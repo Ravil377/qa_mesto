@@ -1,11 +1,10 @@
 .popup__input {
-    padding: 0;
-    padding-left: 10px;
+    padding: 0 10px;
     margin: 0 auto;
     margin-top: 30px;
     display: block;
     min-height: 27px;
-    width: 100%;
+    width: -webkit-fill-available;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -14,7 +13,6 @@
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-
 
 .popup__input:focus::-webkit-input-placeholder {
     color: transparent
@@ -36,9 +34,6 @@
 
 
 @media screen and (max-width: 550px) {
-    .popup__input {
-        width: 100%;
-    }
     .popup__container input:first-child {
         margin-top: 75px;
     }
